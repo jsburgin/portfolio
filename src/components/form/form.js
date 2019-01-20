@@ -30,6 +30,9 @@ export default styled.form`
     padding: 8px;
     outline: none;
     text-indent: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
