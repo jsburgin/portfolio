@@ -4,37 +4,21 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Page from '../components/core/page';
 import Profile from '../components/core/profile';
 import Social from '../components/core/social';
-
-const Hero = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .hero-content {
-    width: 100%;
-
-    a {
-      color: #000;
-    }
-  }
-`;
 
 const Description = styled.p`
   margin: 0 auto;
   padding: 0 30px;
   max-width: 590px;
-`;
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
-    <Hero>
-      <div className="hero-content">
+    <Page>
+      <div className="page-content">
         <Profile />
         <TypingHeader title="Hi, I'm Josh Burgin." />
         <Description>
@@ -45,7 +29,7 @@ const IndexPage = () => (
         </Description>
         <Social />
       </div>
-    </Hero>
+    </Page>
   </Layout>
 )
 

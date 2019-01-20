@@ -31,7 +31,7 @@ class TypingHeader extends React.Component {
     this.state = {
       showCursor: true,
       blinkInterval: 400,
-      length: 0,
+      length: props.skipTyping ? this.props.title.length : 0,
       intervals: [80, 90, 85, 110],
     }
   }
@@ -48,6 +48,10 @@ class TypingHeader extends React.Component {
     })
   }
 
+  startCursorBlink = () => {
+    setInterval(() => { this.toggleCursor() }, this.state.blinkInterval)
+  }
+
   type = () => {
     const length = this.state.length + 1
     this.setState({ length })
@@ -55,12 +59,12 @@ class TypingHeader extends React.Component {
     if (length !== this.props.title.length) {
       setTimeout(() => { this.type() }, this.getRandomInterval())
     } else {
-      setInterval(() => { this.toggleCursor() }, this.state.blinkInterval)
+      this.startCursorBlink();
     }
   }
 
   componentDidMount() {
-    this.type()
+    this.props.skipTyping ? this.startCursorBlink() : this.type();
   }
 
   render() {
@@ -77,6 +81,7 @@ class TypingHeader extends React.Component {
 
 TypingHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  skipTyping: PropTypes.bool,
 }
 
 export default TypingHeader
