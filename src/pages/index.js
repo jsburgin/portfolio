@@ -14,13 +14,22 @@ const Description = styled.p`
   max-width: 590px;
 `
 
+// Prevent retyping the header after switching pages
+let skipTyping = false
+
 const IndexPage = () => (
   <Layout>
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
     <Page>
       <div className="page-content">
         <Profile />
-        <TypingHeader title="Hi, I'm Josh Burgin." />
+        <TypingHeader
+          title="Hi, I'm Josh Burgin."
+          skipTyping={skipTyping}
+          onComplete={() => {
+            skipTyping = true
+          }}
+        />
         <Description>
           I'm a Software Engineer working with the Design Platform
           team <a href="https://squarespace.com">@squarespace</a> in NYC.

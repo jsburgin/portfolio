@@ -60,6 +60,10 @@ class TypingHeader extends React.Component {
       setTimeout(() => { this.type() }, this.getRandomInterval())
     } else {
       this.startCursorBlink();
+
+      if (this.props.onComplete) {
+        this.props.onComplete();
+      }
     }
   }
 
@@ -82,6 +86,7 @@ class TypingHeader extends React.Component {
 TypingHeader.propTypes = {
   title: PropTypes.string.isRequired,
   skipTyping: PropTypes.bool,
+  onComplete: PropTypes.func
 }
 
 export default TypingHeader
