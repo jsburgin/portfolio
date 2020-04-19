@@ -14,7 +14,7 @@ const Profile = styled.div`
 const ProfileImage = styled.img`
   border-radius: 55px;
   padding: 4px;
-  border: 3px solid rgba(99,220,210,1.0);
+  border: 3px solid #F45D48;
   margin-bottom: 1rem;
   min-height: 90px;
   min-width: 90px;

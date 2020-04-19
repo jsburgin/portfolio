@@ -19,8 +19,8 @@ export default styled.form`
 
     &.valid {
       opacity: 1;
-      color: rgba(99, 220, 210, 1);
-      border-color: rgba(99, 220, 210, 1);
+      color: #F45D48;
+      border-color: #F45D48;
       cursor: pointer;
     }
   }

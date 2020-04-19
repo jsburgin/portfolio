@@ -21,7 +21,7 @@ const Cursor = styled.div`
   background: #fff;
 
   &.show {
-    background: rgba(99,220,210,1.0);
+    background: #F45D48;
   }
 `;
 

@@ -36,7 +36,7 @@ const HeaderMenu = styled.ul`
       border-bottom: 2px solid rgba(255, 255, 255, 0);
 
       &.active {
-        border-color: rgba(99, 220, 210, 1.0);
+        border-color: #F45D48;
       }
     }
   }
