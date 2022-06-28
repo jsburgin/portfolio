@@ -114,7 +114,7 @@ class ContactForm extends React.Component {
         <textarea
           name="message"
           onChange={this.handleMessageChange}
-          placeholder="What's on your mind?"
+          placeholder="Message"
         />
         <button
           onClick={this.onSubmit}
